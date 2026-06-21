@@ -405,8 +405,8 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
     curl -s ipinfo.io/city >>/etc/xray/city
     curl -s ipinfo.io/org | cut -d " " -f 2-10 >>/etc/xray/isp
     print_install "Memasang Konfigurasi Packet"
-    wget -O /etc/haproxy/haproxy.cfg "https://raw.githubusercontent.com/Arya-Blitar22/cok/main/fire/haproxy.cfg" >/dev/null 2>&1
-    wget -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/Arya-Blitar22/cok/main/fire/xray.conf" >/dev/null 2>&1
+    wget -O /etc/haproxy/haproxy.cfg "https://raw.githubusercontent.com/amonnoris1/websocks/main/cok/fire/haproxy.cfg" >/dev/null 2>&1
+    wget -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/amonnoris1/websocks/main/cok/fire/xray.conf" >/dev/null 2>&1
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/xray.conf
     curl ${REPO}media/nginx.conf > /etc/nginx/nginx.conf
@@ -704,9 +704,9 @@ print_success "Fail2ban Installed"
 function ins_epro(){
 clear
 print_install "Menginstall ePro WebSocket Proxy"
-    wget -O /usr/bin/ws "https://raw.githubusercontent.com/Arya-Blitar22/bokep/main/dora/ws" >/dev/null 2>&1
-    wget -O /usr/bin/tun.conf "https://raw.githubusercontent.com/Arya-Blitar22/bokep/main/dora/tun.conf" >/dev/null 2>&1
-    wget -O /etc/systemd/system/ws.service "https://raw.githubusercontent.com/Arya-Blitar22/bokep/main/dora/ws.service" >/dev/null 2>&1
+    wget -O /usr/bin/ws "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep/dora/ws" >/dev/null 2>&1
+    wget -O /usr/bin/tun.conf "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep/dora/tun.conf" >/dev/null 2>&1
+    wget -O /etc/systemd/system/ws.service "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep/dora/ws.service" >/dev/null 2>&1
     chmod +x /etc/systemd/system/ws.service
     chmod +x /usr/bin/ws
     chmod 644 /usr/bin/tun.conf

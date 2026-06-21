@@ -101,7 +101,7 @@ apt install wondershaper -y
 clear
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/Arya-Blitar22/bokep/main/"
+    REPO="https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep/"
 
 ####
 start=$(date +%s)
@@ -271,7 +271,7 @@ echo $host1 > /root/domain
 echo ""
 elif [[ $host == "2" ]]; then
 #install cf
-wget https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 else
@@ -354,7 +354,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
  
     # // Ambil Config Server
     wget -O /etc/xray/config.json "${REPO}v1/config.json" >/dev/null 2>&1
-    wget -O /etc/systemd/system/runn.service "https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/runn.service" >/dev/null 2>&1
+    wget -O /etc/systemd/system/runn.service "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/runn.service" >/dev/null 2>&1
     #chmod +x /usr/local/bin/xray
     domain=$(cat /etc/xray/domain)
     IPVS=$(cat /etc/xray/ipvps)
@@ -404,7 +404,7 @@ print_success "Konfigurasi Packet"
 function ssh(){
 clear
 print_install "Memasang Password SSH"
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/password"
 chmod +x /etc/pam.d/common-password
 
     DEBIAN_FRONTEND=noninteractive dpkg-reconfigure keyboard-configuration
@@ -480,11 +480,11 @@ print_install "Memasang Service"
 
 # // Installing UDP Mini
 mkdir -p /usr/local/kyt/
-wget -q -O /usr/local/kyt/udp-mini "https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/udp-mini"
+wget -q -O /usr/local/kyt/udp-mini "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/udp-mini"
 chmod +x /usr/local/kyt/udp-mini
-wget -q -O /etc/systemd/system/udp-mini-1.service "https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/udp-mini-1.service"
-wget -q -O /etc/systemd/system/udp-mini-2.service "https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/udp-mini-2.service"
-wget -q -O /etc/systemd/system/udp-mini-3.service "https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/udp-mini-3.service"
+wget -q -O /etc/systemd/system/udp-mini-1.service "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/udp-mini-1.service"
+wget -q -O /etc/systemd/system/udp-mini-2.service "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/udp-mini-2.service"
+wget -q -O /etc/systemd/system/udp-mini-3.service "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/udp-mini-3.service"
 systemctl disable udp-mini-1
 systemctl stop udp-mini-1
 systemctl enable udp-mini-1
@@ -511,7 +511,7 @@ clear
 function ins_SSHD(){
 clear
 print_install "Memasang SSHD"
-wget -q -O /etc/ssh/sshd_config "https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/sshd" >/dev/null 2>&1
+wget -q -O /etc/ssh/sshd_config "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/sshd" >/dev/null 2>&1
 chmod 700 /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 systemctl restart ssh
@@ -525,7 +525,7 @@ clear
 print_install "Menginstall Dropbear"
 # // Installing Dropbear
 apt-get install dropbear -y > /dev/null 2>&1
-wget -O /etc/issue.net "https://raw.githubusercontent.com/Arya-Blitar22/bokep/main/v1/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep/v1/issue.net"
 wget -q -O /etc/default/dropbear "${REPO}v1/dropbear.conf"
 chmod +x /etc/default/dropbear
 /etc/init.d/dropbear restart
@@ -561,7 +561,7 @@ function ins_openvpn(){
 clear
 print_install "Menginstall OpenVPN"
 #OpenVPN
-wget https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/openvpn &&  chmod +x openvpn && ./openvpn
+wget https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/openvpn &&  chmod +x openvpn && ./openvpn
 /etc/init.d/openvpn restart
 print_success "OpenVPN"
 }
@@ -598,7 +598,7 @@ password jokerman77
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
-wget -q -O /etc/ipserver "https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/ipserver" && bash /etc/ipserver
+wget -q -O /etc/ipserver "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/ipserver" && bash /etc/ipserver
 print_success "Backup Server"
 }
 
@@ -667,7 +667,7 @@ systemctl start ws
 systemctl restart ws
 wget -q -O /usr/local/share/xray/geosite.dat "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat" >/dev/null 2>&1
 wget -q -O /usr/local/share/xray/geoip.dat "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat" >/dev/null 2>&1
-wget -O /usr/sbin/ftvpn "https://raw.githubusercontent.com/Arya-Blitar22/bokep2/main/v1/ftvpn" >/dev/null 2>&1
+wget -O /usr/sbin/ftvpn "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep2/v1/ftvpn" >/dev/null 2>&1
 chmod +x /usr/sbin/ftvpn
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
 iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
@@ -727,7 +727,7 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-    wget https://raw.githubusercontent.com/Arya-Blitar22/mainan/main/anjing/menu.zip
+    wget https://raw.githubusercontent.com/amonnoris1/websocks/main/mainan/anjing/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin

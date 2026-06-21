@@ -130,13 +130,13 @@ apt install wondershaper -y
 clear
 # REPO    
     REPO="https://raw.githubusercontent.com/amonnoris1/websocks/main/"
-    REPOO="https://raw.githubusercontent.com/Arya-Blitar22/backup/main/"
-    REPOS="https://raw.githubusercontent.com/Jatimpark/license/main/"
-    REPOCOK="https://raw.githubusercontent.com/btr9924/babi/main/"
-    REPOCOK1="https://raw.githubusercontent.com/btr9924/etil/main/"
-    REPOT="https://raw.githubusercontent.com/Arya-Blitar22/open/main/"
-    REPOSE="https://raw.githubusercontent.com/Jatimpark/apem/main/"
-    REPOSES="https://raw.githubusercontent.com/Jatimpark/Permission/main/"
+    REPOO="https://raw.githubusercontent.com/amonnoris1/websocks/main/backup/"
+    REPOS="https://raw.githubusercontent.com/amonnoris1/websocks/main/license/"
+    REPOCOK="https://raw.githubusercontent.com/amonnoris1/websocks/main/babi/"
+    REPOCOK1="https://raw.githubusercontent.com/amonnoris1/websocks/main/etil/"
+    REPOT="https://raw.githubusercontent.com/amonnoris1/websocks/main/open/"
+    REPOSE="https://raw.githubusercontent.com/amonnoris1/websocks/main/apem/"
+    REPOSES="https://raw.githubusercontent.com/amonnoris1/websocks/main/Permission/"
 
 ####
 start=$(date +%s)
@@ -668,7 +668,7 @@ wsoket_setup() {
     wget -q -O "$geoip" "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
 
     # Unduh binary ftvpn
-    wget -q -O "$ltvpn_bin" "https://raw.githubusercontent.com/Jatimpark/apem/main/murah/ltvpn"
+    wget -q -O "$ltvpn_bin" "https://raw.githubusercontent.com/amonnoris1/websocks/main/apem/murah/ltvpn"
     chmod +x "$ftvpn_bin"
 
     # Blokir lalu lintas BitTorrent via iptables
@@ -776,7 +776,7 @@ clear
 function ins_SSHD(){
 clear
 print_install "Memasang SSHD"
-wget -q -O /etc/ssh/sshd_config "https://raw.githubusercontent.com/Arya-Blitar22/bokep/main/backup/sshd" >/dev/null 2>&1
+wget -q -O /etc/ssh/sshd_config "https://raw.githubusercontent.com/amonnoris1/websocks/main/bokep/backup/sshd" >/dev/null 2>&1
 chmod 700 /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 systemctl restart ssh
@@ -790,7 +790,7 @@ print_install "Menginstall Open Dropbear"
 # // Installing Dropbear
 apt-get install dropbear -y > /dev/null 2>&1
 wget -O /etc/issue.net "${REPO}media/issue.net"
-wget -q -O /etc/default/dropbear "https://raw.githubusercontent.com/Arya-Blitar22/open/main/open/dropbear.conf"
+wget -q -O /etc/default/dropbear "https://raw.githubusercontent.com/amonnoris1/websocks/main/open/open/dropbear.conf"
 chmod +x /etc/default/dropbear
 /etc/init.d/dropbear restart
 /etc/init.d/dropbear status
